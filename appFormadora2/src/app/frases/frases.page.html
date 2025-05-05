@@ -1,0 +1,24 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Imagem do Dia da NASA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="buscarImagem()">Buscar Imagem</ion-button>
+
+  <div *ngIf="imageData">
+    <h2>{{ imageData.title }}</h2>
+    <p>{{ imageData.explanation }}</p>
+    <img [src]="imageData.url" alt="Imagem do Dia">
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+</ion-content>
+
+
+
+
